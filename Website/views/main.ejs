@@ -1,0 +1,30 @@
+
+<%-include('header')-%>
+
+<div class="text-center center-div" id="conversion">
+    <div class="container w-25 border py-5">       
+        <div class="title pb-10">
+
+              <% if(typeof alert != 'undefined'){ %>
+                <% alert.forEach(function(error){ %>
+                <div class ="alert alert-warning alert-dismissible fade show" role="alert">
+                    <%= error.msg %>
+                </div>
+            <% }) %>
+            <% } %>
+
+            <h2 class="font-wight-bold">Number Conversion</h2>
+
+            <div class="span">Convert number from -99999 to 99999 to string</div>
+        </div>
+        <form action="/route/convert" method ="POST" class="pt-3">
+            <div class="form-class">
+                <small class="form-text text-muted text-left">Please enter a number</small>
+                <input type="number" class = "form-control" placeholder="number" name="number">               
+            </div> 
+            <button type="submit" class="btn btn-success rounded-pill mt-3">Convert</button>
+        </form>
+    </div>
+</div>
+    
+<%-include('footer')-%>

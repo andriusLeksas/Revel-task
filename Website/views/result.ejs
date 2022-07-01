@@ -1,0 +1,12 @@
+
+<%-include('header')-%>
+
+<div class="text-center center-div mt-5" id="result">
+    <div class="container w-25 border py-5 mt-5">
+        <h3>The converted number is:</h3>
+        <h5><%= locals.passedVariable? passedVariable: "Could not get the number"%></h5>
+        <a href="/" style="text-decoration:none">Return</a>  
+    </div>
+</div>
+    
+<%-include('footer')-%>
